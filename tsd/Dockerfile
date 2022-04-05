@@ -38,7 +38,7 @@ RUN apt update && \
 
 # Get source code
 WORKDIR /tmp
-RUN git clone https://github.com/TheSpaghettiDetective/TheSpaghettiDetective && \
+RUN git clone -b release https://github.com/TheSpaghettiDetective/TheSpaghettiDetective && \
     mv TheSpaghettiDetective/ml_api /app && \
     mv TheSpaghettiDetective/web /web && \
     rm -rf TheSpaghettiDetective
